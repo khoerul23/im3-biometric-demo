@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IM3 Biometric</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+body {
+  margin: 0;
+  padding: 22px;
+  font-family: Arial, sans-serif;
+  background: #fff9dc;
+  color: #171717;
+}
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  margin-top: 20px;
+}
+h1 { color: #e6ad00; }
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 12px;
+  border: 0;
+  border-radius: 12px;
+  background: #ffcc00;
+  font-weight: bold;
+  font-size: 16px;
+}
+small { color: #666; }
+</style>
+</head>
+<body>
+<h1>IM3 BIOMETRIC</h1>
+<p>Layanan bantuan registrasi kartu IM3</p>
+
+<div class="card">
+  <h3>Registrasi Pelanggan</h3>
+  <p>Ikuti panduan registrasi melalui kanal resmi Indosat.</p>
+  <button onclick="daftar()">Mulai Registrasi</button>
+</div>
+
+<div class="card">
+  <h3>Verifikasi Biometrik</h3>
+  <p>Verifikasi wajah dilakukan melalui sistem resmi operator.</p>
+  <button onclick="verifikasi()">Panduan Biometrik</button>
+</div>
+
+<div class="card">
+  <h3>Bantuan</h3>
+  <p>Hubungi admin outlet untuk mendapatkan bantuan.</p>
+</div>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
+function daftar() {
+  tg.showAlert("Silakan lanjutkan melalui kanal resmi Indosat.");
+}
+
+function verifikasi() {
+  tg.showAlert("Verifikasi biometrik harus melalui layanan resmi Indosat.");
+}
+</script>
+</body>
+</html>
